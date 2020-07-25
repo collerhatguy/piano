@@ -1,18 +1,36 @@
+body {
+  background-color: black;
+}
+
 #keyMap {
-  width: 90vw;
+  width: 100vw;
   margin: 0 auto;
-  text-align: center;
+  color: white;
 }
 #keyMap ul {
   list-style: none;
 }
 
-#keyContainer {
-  width: 90vw;
-  margin: 0 auto;
-  text-align: center;
+#pianoContainer {
   display: grid;
-  grid-template-columns: repeat(12, vw/12);
+  grid-template-columns: repeat(7, 13.8571428571vw);
+}
+#pianoContainer .key {
+  width: 13.5714285714vw;
+  height: 50vh;
+  background-color: white;
+  border: 2px solid black;
+  position: relative;
+  z-index: 1;
+}
+#pianoContainer .key .sharp {
+  width: 6.7857142857vw;
+  height: 35vh;
+  background-color: black;
+  border: 2px solid white;
+  border-top: none;
+  z-index: 1;
+  display: absolute;
 }
 
 /*# sourceMappingURL=output.css.map */
