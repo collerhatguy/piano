@@ -1,0 +1,18 @@
+@mixin center() {
+  width: 90vw;
+  margin: 0 auto;
+  text-align: center;
+}
+#keyMap {
+  @include center();
+  ul {
+    list-style: none;
+  }
+}
+#keyContainer {
+  @include center();
+  display: grid;
+  grid-template-columns: repeat(12, vw / 12);
+  .key {
+  }
+}

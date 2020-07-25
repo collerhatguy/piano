@@ -1,0 +1,18 @@
+#keyMap {
+  width: 90vw;
+  margin: 0 auto;
+  text-align: center;
+}
+#keyMap ul {
+  list-style: none;
+}
+
+#keyContainer {
+  width: 90vw;
+  margin: 0 auto;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(12, vw/12);
+}
+
+/*# sourceMappingURL=output.css.map */
