@@ -22,15 +22,15 @@ body {
     border: 2px solid black;
     position: relative;
     z-index: 1;
-    .sharp {
-      width: (95vw / 14);
-      height: 35vh;
-      background-color: black;
-      border: 2px solid white;
-      border-top: none;
-      z-index: 1;
-      display: absolute;
-      right: 0;
-    }
+  }
+  .sharp {
+    width: (95vw / 14);
+    height: 35vh;
+    background-color: black;
+    border: 2px solid white;
+    border-top: none;
+    z-index: 1;
+    display: absolute;
+    right: 0;
   }
 }
