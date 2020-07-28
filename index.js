@@ -1,64 +1,66 @@
-var body = document.getElementsByTagName(body);
-
 // will create program that will listen to user input
-window.addEventListener("keypress", keyPlay);
+window.addEventListener("keydown", keyPlay);
+window.addEventListener("keyup", keyStop);
 function keyPlay(e) {
-  const key = whichKey(e);
+  var key = whichKey(e);
   console.log(key);
+  var x = document.getElementById(key);
+  x.play();
 }
 function keyStop(e) {
-  const key = whichKey(e);
+  var key = whichKey(e);
+  var x = document.getElementById(key);
+  x.load();
 }
 function whichKey(a) {
   switch (a.keyCode) {
     //a
-    case 65:
-      console.log("a");
-      return 65;
+    case 97:
+      return "c";
       break;
     //s
-    case 83:
-      return 85;
+    case 115:
+      return "d";
       break;
     //d
-    case 68:
-      return 68;
+    case 100:
+      return "e";
       break;
     //f
-    case 70:
-      return 70;
+    case 102:
+      return "f";
       break;
     //g
-    case 71:
-      return 71;
+    case 103:
+      return "g";
       break;
     //h
-    case 72:
-      return 72;
+    case 105:
+      return "a";
       break;
     //j
-    case 74:
-      return 74;
+    case 106:
+      return "b";
       break;
     //w
-    case 87:
-      return 87;
+    case 119:
+      return "c#";
       break;
     //e
-    case 84:
-      return 84;
+    case 102:
+      return "d#";
       break;
     //t
-    case 89:
-      return 89;
+    case 121:
+      return "f#";
       break;
     //y
-    case 90:
-      return 90;
+    case 122:
+      return "g#";
       break;
     //u
-    case 85:
-      return 85;
+    case 117:
+      return "a#";
       break;
     default:
       break;
