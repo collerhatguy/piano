@@ -3,23 +3,24 @@ window.addEventListener("keydown", keyPlay);
 window.addEventListener("keyup", keyStop);
 function keyPlay(e) {
   var key = whichKey(e);
-  console.log(key);
   var x = document.getElementById(key);
   x.play();
 }
 function keyStop(e) {
   var key = whichKey(e);
+  console.log(key)
   var x = document.getElementById(key);
   x.pause();
 }
 function whichKey(a) {
+  console.log(a)
   switch (a.keyCode) {
     //a
-    case 97:
+    case 65:
       return "c";
       break;
     //s
-    case 115:
+    case 83:
       return "d";
       break;
     //d
