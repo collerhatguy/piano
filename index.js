@@ -10,7 +10,7 @@ function keyPlay(e) {
 function keyStop(e) {
   var key = whichKey(e);
   var x = document.getElementById(key);
-  x.load();
+  x.pause();
 }
 function whichKey(a) {
   switch (a.keyCode) {
