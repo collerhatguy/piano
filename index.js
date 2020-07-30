@@ -8,12 +8,11 @@ function keyPlay(e) {
 }
 function keyStop(e) {
   var key = whichKey(e);
-  console.log(key)
   var x = document.getElementById(key);
-  x.pause();
+  x.load();
 }
 function whichKey(a) {
-  console.log(a)
+  console.log(a);
   switch (a.keyCode) {
     //a
     case 65:
@@ -24,43 +23,43 @@ function whichKey(a) {
       return "d";
       break;
     //d
-    case 100:
+    case 68:
       return "e";
       break;
     //f
-    case 102:
+    case 70:
       return "f";
       break;
     //g
-    case 103:
+    case 71:
       return "g";
       break;
     //h
-    case 105:
+    case 72:
       return "a";
       break;
     //j
-    case 106:
+    case 74:
       return "b";
       break;
     //w
-    case 119:
+    case 87:
       return "c#";
       break;
     //e
-    case 102:
+    case 69:
       return "d#";
       break;
     //t
-    case 121:
+    case 84:
       return "f#";
       break;
     //y
-    case 122:
+    case 89:
       return "g#";
       break;
     //u
-    case 117:
+    case 85:
       return "a#";
       break;
     default:
