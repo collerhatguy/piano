@@ -7,7 +7,7 @@
       name="description"
       content="This program allows you to play piano from your laptop."
     />
-    <link rel="stylesheet" href="output.css" />
+    <link rel="stylesheet" href="index.css" />
     <script src="index.js" defer></script>
     <title>Document</title>
   </head>
@@ -31,41 +31,41 @@
       </ul>
     </div>
     <div id="pianoContainer">
-      <div class="key">
-        <audio id="c" class="hidden" src="notes/C.wav"></audio>
+      <div class="key white" data-note="C">
+        <audio id="C" class="hidden" src="notes/C.wav"></audio>
       </div>
-      <div class="key">
-        <audio id="d" class="hidden" src="notes/D.wav"></audio>
-        <div class="c# sharp">
-          <audio id="c#" class="hidden" src="notes/C#.wav"></audio>
-        </div>
+      <div class="key black" data-note="C#">
+        <audio id="C#" class="hidden" src="notes/C#.wav"></audio>
       </div>
-      <div class="key">
-        <audio id="e" class="hidden" src="notes/E.wav"></audio>
-        <div class="sharp">
-          <audio id="d#" class="hidden" src="notes/D#.wav"></audio>
-        </div>
+      <div class="key white" data-note="D">
+        <audio id="D" class="hidden" src="notes/D.wav"></audio>
       </div>
-      <div class="key">
-        <audio id="f" class="hidden" src="notes/F.wav"></audio>
+      <div class="key black" data-note="D#">
+        <audio id="D#" class="hidden" src="notes/D#.wav"></audio>
       </div>
-      <div class="key">
-        <audio id="g" class="hidden" src="notes/G.wav"></audio>
-        <div class="sharp">
-          <audio id="f#" class="hidden" src="notes/F#.wav"></audio>
-        </div>
+      <div class="key white" data-note="E">
+        <audio id="E" class="hidden" src="notes/E.wav"></audio>
       </div>
-      <div class="key">
-        <audio id="a" class="hidden" src="notes/a.wav"></audio>
-        <div class="sharp">
-          <audio id="g#" class="hidden" src="notes/G#.wav"></audio>
-        </div>
+      <div class="key white" data-note="F">
+        <audio id="F" class="hidden" src="notes/F.wav"></audio>
       </div>
-      <div class="key">
-        <audio id="b" class="hidden" src="notes/B.wav"></audio>
-        <div class="sharp">
-          <audio id="a#" class="hidden" src="notes/a#.wav"></audio>
-        </div>
+      <div class="key black" data-note="F#">
+        <audio id="F#" class="hidden" src="notes/F#.wav"></audio>
+      </div>
+      <div class="key white" data-note="G">
+        <audio id="G" class="hidden" src="notes/G.wav"></audio>
+      </div>
+      <div class="key black" data-note="G#">
+        <audio id="G#" class="hidden" src="notes/G#.wav"></audio>
+      </div>
+      <div class="key white" data-note="A">
+        <audio id="A" class="hidden" src="notes/A.wav"></audio>
+      </div>
+      <div class="key black" data-note="A#">
+        <audio id="A#" class="hidden" src="notes/A#.wav"></audio>
+      </div>
+      <div class="key white" data-note="B">
+        <audio id="B" class="hidden" src="notes/B.wav"></audio>
       </div>
     </div>
   </body>

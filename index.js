@@ -1,68 +1,29 @@
-// will create program that will listen to user input
-window.addEventListener("keydown", keyPlay);
-window.addEventListener("keyup", keyStop);
-function keyPlay(e) {
-  var key = whichKey(e);
-  var x = document.getElementById(key);
-  x.play();
+const keys = document.querySelectorAll(".key");
+const white = document.querySelectorAll(".white");
+const black = document.querySelectorAll(".black");
+const whiteKeys = ["a", "s", "d", "f", "g", "h", "j"];
+const blackKeys = ["w", "e", "t", "y", "u"];
+
+keys.forEach((key) => {
+  key.addEventListener("click", () => keyPlay(key));
+});
+
+document.addEventListener("keydown", keyboardPlay);
+function keyPlay(key) {
+  const sound = document.getElementById(key.dataset.note);
+  sound.currentTime = 0;
+  sound.play();
+  key.classList.add("active");
+  sound.addEventListener("ended", () => {
+    key.classList.remove("active");
+  });
 }
-function keyStop(e) {
-  var key = whichKey(e);
-  var x = document.getElementById(key);
-  x.load();
-}
-function whichKey(a) {
-  console.log(a);
-  switch (a.keyCode) {
-    //a
-    case 65:
-      return "c";
-      break;
-    //s
-    case 83:
-      return "d";
-      break;
-    //d
-    case 68:
-      return "e";
-      break;
-    //f
-    case 70:
-      return "f";
-      break;
-    //g
-    case 71:
-      return "g";
-      break;
-    //h
-    case 72:
-      return "a";
-      break;
-    //j
-    case 74:
-      return "b";
-      break;
-    //w
-    case 87:
-      return "c#";
-      break;
-    //e
-    case 69:
-      return "d#";
-      break;
-    //t
-    case 84:
-      return "f#";
-      break;
-    //y
-    case 89:
-      return "g#";
-      break;
-    //u
-    case 85:
-      return "a#";
-      break;
-    default:
-      break;
-  }
+function keyboardPlay(e) {
+  if (e.repeat) return;
+  const key = e.key;
+  const whiteKeyIndex = whiteKeys.indexOf(key);
+  const blackKeyIndex = blackKeys.indexOf(key);
+
+  if (whiteKeyIndex > -1) keyPlay(white[whiteKeyIndex]);
+  if (blackKeyIndex > -1) keyPlay(black[blackKeyIndex]);
 }
